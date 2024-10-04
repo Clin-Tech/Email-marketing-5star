@@ -1,0 +1,12 @@
+@import "../../../responsive.scss";
+
+.illus {
+  svg {
+    width: 22em;
+    height: 17em;
+
+    @include tablet {
+      width: 18em;
+    }
+  }
+}
