@@ -50,7 +50,7 @@ function ResetPassword() {
             <h1>Reset Password</h1>
             <p>
               Remember login details ? {""}
-              <Link to={"/auth/sigin"}>Log in</Link>
+              <Link to={"/auth/signin"}>Log in</Link>
             </p>
           </div>
           <form action="">
@@ -72,10 +72,8 @@ function ResetPassword() {
         </div>
       </div>
       <div className="right">
+        <img src="/gradient.png" alt="" />
         <div className="illustration">
-          <div className="linear">
-            {/* <img src="./gradient.png" alt="" /> */}
-          </div>
           <Illus />
         </div>
         <div className="illust-text">

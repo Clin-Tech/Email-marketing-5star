@@ -2,6 +2,9 @@ import Logo from "../../global ui/logo/Logo";
 import Illus from "../../global ui/automation-illustration/Illus";
 import "./signup.scss";
 import { motion } from "framer-motion";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const containerVariants = {
   hidden: {
@@ -38,6 +41,14 @@ const listedText = [
 ];
 
 function Signup() {
+  // State to track if password is visible
+  const [passwordVisible, setPasswordVisible] = useState(false);
+
+  // Toggle the password visibility
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
   return (
     <div className="signup">
       <div className="left">
@@ -48,7 +59,7 @@ function Signup() {
           <div className="title">
             <h1>Sign Up</h1>
             <p>
-              Already have an account ? <a href="">Log in</a>{" "}
+              Already have an account ? <Link to={"/auth/signin"}>Log in</Link>{" "}
             </p>
           </div>
           <form action="">
@@ -70,10 +81,10 @@ function Signup() {
                 required
               />
             </div>
-            <div>
+            <div className="toggleDiv" style={{ position: "relative" }}>
               <label htmlFor="psw">Password</label>
               <input
-                type="password"
+                type={passwordVisible ? "text" : "password"}
                 name="psw"
                 placeholder="@£*%"
                 id="psw"
@@ -81,16 +92,43 @@ function Signup() {
                 // title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                 required
               />
-              {/* <span className="password-toggle-icon">
-                <i className="fas fa-eye"></i>
-              </span> */}
+              <span
+                onClick={togglePasswordVisibility} // Toggle on icon click
+                style={{
+                  position: "absolute",
+                  top: "70%",
+                  right: "10px",
+                  transform: "translateY(-50%)",
+                  cursor: "pointer",
+                  borderLeft: "1px solid black",
+                  paddingLeft: "5px",
+                }}
+              >
+                {passwordVisible ? <VisibilityOff /> : <Visibility />}
+              </span>
             </div>
-            <div>
+            <div className="toggleDiv" style={{ position: "relative" }}>
               <label htmlFor="cPsw">Confirm Password</label>
-              <input type="password" name="cPsw" placeholder="@£*%" required />
-              {/* <span className="password-toggle-icon">
-                <i className="fas fa-eye"></i>
-              </span> */}
+              <input
+                type={passwordVisible ? "text" : "password"}
+                name="cPsw"
+                placeholder="@£*%"
+                required
+              />
+              <span
+                onClick={togglePasswordVisibility} // Toggle on icon click
+                style={{
+                  position: "absolute",
+                  top: "70%",
+                  right: "10px",
+                  transform: "translateY(-50%)",
+                  cursor: "pointer",
+                  borderLeft: "1px solid black",
+                  paddingLeft: "5px",
+                }}
+              >
+                {passwordVisible ? <VisibilityOff /> : <Visibility />}
+              </span>
             </div>
             <div className="submit">
               <button className="btn" type="submit">
@@ -101,10 +139,8 @@ function Signup() {
         </div>
       </div>
       <div className="right">
+        <img src="/gradient.png" alt="" />
         <div className="illustration">
-          <div className="linear">
-            {/* <img src="./gradient.png" alt="" /> */}
-          </div>
           <Illus />
         </div>
         <div className="illust-text">
