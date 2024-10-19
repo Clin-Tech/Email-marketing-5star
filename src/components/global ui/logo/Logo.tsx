@@ -45,11 +45,12 @@ const letterVariants = {
   visible: { opacity: 1 }, // Letters animate into view with no offset
 };
 
-function Logo() {
+function Logo({ size, height }) {
   return (
     <motion.div className="logo">
       <motion.svg
         className="img"
+        style={height}
         width="31"
         height="31"
         viewBox="0 0 31 31"
@@ -69,6 +70,7 @@ function Logo() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
+        style={size}
       >
         {title.split("").map((letter, index) => (
           <motion.span key={index} variants={letterVariants}>

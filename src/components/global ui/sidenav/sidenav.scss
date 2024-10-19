@@ -1,0 +1,84 @@
+@import "../../../responsive.scss";
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  height: 90vh;
+  width: 18vw;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  #title {
+    padding-top: 10px;
+    padding-left: 20px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid #e0e0e0;
+
+    @include tablet {
+      width: 24vw;
+    }
+    @include mobile {
+      width: 40vw;
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-weight: 600;
+      color: #000000;
+      font-size: 14px;
+      width: 100%;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .logout {
+    border: none;
+    width: 150px;
+    height: 30px;
+    padding-left: 15px;
+    display: flex;
+    font-weight: 600;
+    color: #000000;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    align-items: flex-start;
+    background-color: inherit;
+    cursor: pointer;
+
+    button {
+      &:hover {
+        background-color: #365f36;
+        color: #ffffff;
+        border-radius: 7px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
