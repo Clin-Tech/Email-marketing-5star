@@ -32,19 +32,71 @@
       margin-bottom: 10px;
     }
 
-    .container {
+    .contentContainer {
       background-color: #f5f6fa;
       height: max-content;
       width: 100%;
+      padding: 10px 20px;
+      font-family: "Nunito Sans", sans-serif;
+      font-optical-sizing: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-bottom: 40px;
 
       @include miniDesktop {
         width: 100%;
+      }
+
+      @include tablet {
+        width: 75vw;
         margin: 0;
-        padding: 0;
       }
 
       @include mobile {
-        width: 100vw;
+        width: 100%;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 26px;
+        color: #202224;
+      }
+
+      h5 {
+        font-weight: 600;
+        font-size: 18px;
+        color: #202224;
+      }
+
+      .credit {
+        margin: 0;
+        padding: 0;
+        width: 98%;
+
+        @include tablet {
+          width: 92%;
+        }
+
+        @include mini {
+          width: 100%;
+        }
+      }
+
+      .graph {
+        width: 98%;
+        // height: 400px;
+
+        @include miniDesktop {
+          width: 92%;
+        }
+        @include mobile {
+          width: 97%;
+        }
+      }
+
+      .lastSent {
+        width: 98%;
       }
     }
   }

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Logo from "../logo/Logo";
 import "./mobileNav.scss";
 import { motion } from "framer-motion";
@@ -64,7 +63,7 @@ function MobileBar() {
       </a>
       <div
         className="offcanvas offcanvas-start"
-        tabindex="-1"
+        tab-index="-1"
         id="offcanvasWithBackdrop"
         aria-labelledby="offcanvasWithBackdropLabel"
       >

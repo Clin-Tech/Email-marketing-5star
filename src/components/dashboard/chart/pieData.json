@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Subscribe",
+    "value": 50
+  },
+  {
+    "label": "Unsubscribe",
+    "value": 20
+  },
+  {
+    "label": "Spam Reported",
+    "value": 10
+  },
+  {
+    "label": "Blacklisted",
+    "value": 5
+  }
+]

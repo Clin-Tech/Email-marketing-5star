@@ -1,0 +1,109 @@
+@import "../../../responsive.scss";
+
+.metrics {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 98%;
+  background-color: #ffffff;
+  height: max-content;
+  border-radius: 8px;
+  padding: 15px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    gap: 20px;
+  }
+  @include mobile {
+    width: 92%;
+    padding-left: 10px;
+  }
+  @include mini {
+    width: 97%;
+    padding-left: 15px;
+  }
+
+  .left {
+    padding: 10px 0;
+    width: 55%;
+
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    @include mini {
+      width: 330px;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 42%;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+
+    @include miniDesktop {
+      padding: 20px 5px;
+    }
+
+    @include tablet {
+      width: 90%;
+    }
+
+    .title {
+      margin-bottom: 5px;
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #757575;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+
+    h6 {
+      background-color: #f4f9f4;
+      font-weight: 400;
+      font-size: 14px;
+      width: 100%;
+      color: #000000;
+      padding: 15px 15px;
+      border-radius: 5px;
+
+      @include miniDesktop {
+        font-size: 12px;
+      }
+
+      @include tablet {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+      }
+      @include mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      @include mini {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    #time {
+      font-weight: 300;
+      font-size: 15px;
+      color: #333333;
+    }
+  }
+}
