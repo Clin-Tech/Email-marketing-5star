@@ -2,16 +2,11 @@ import { useState } from "react";
 import ProfileCard from "../profileCard/ProfileCard";
 import "./topnav.scss";
 import Logo from "../logo/Logo";
-import Sidenav from "../sidenav/Sidenav";
 import MobileBar from "../mobileNav/MobileBar";
 
 function Topnav() {
-  const fSize = {
-    fontSize: "30px",
-  };
-  const logoHeight = {
-    height: 20,
-  };
+  const fSize = "30px";
+  const logoHeight = 20;
 
   const [selectLanguage, setSelectedLanguage] = useState({
     language: "English",

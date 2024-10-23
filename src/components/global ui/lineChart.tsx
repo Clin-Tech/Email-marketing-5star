@@ -39,7 +39,8 @@ const LineChartWithBackground = () => {
       const { ctx, chartArea } = chart;
 
       if (!chartArea) {
-        return null;
+        // Return a default solid color if chartArea is not available
+        return "#365F364D"; // Fallback color
       }
 
       // Create a linear gradient (from top to bottom)

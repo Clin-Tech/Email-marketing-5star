@@ -43,7 +43,7 @@ function ResetPassword() {
     <div className="reset">
       <div className="left">
         <div className="header">
-          <Logo />
+          <Logo size={undefined} height={undefined} />
         </div>
         <div className="content">
           <div className="title">

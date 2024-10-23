@@ -3,18 +3,9 @@ import Logo from "../logo/Logo";
 import "./sidenav.scss";
 import { useState } from "react";
 
-interface sizes {
-  fontSize: string;
-  height: number;
-}
-
 function Sidenav() {
-  const fSize = {
-    fontSize: "30px",
-  };
-  const logoHeight = {
-    height: 20,
-  };
+  const fSize = "35px";
+  const logoHeight = 25;
 
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
