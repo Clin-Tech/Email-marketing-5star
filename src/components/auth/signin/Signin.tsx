@@ -53,7 +53,7 @@ function Signin() {
     <div className="signin">
       <div className="left">
         <div className="header">
-          <Logo size={undefined} height={undefined} />
+          <Logo />
         </div>
         <div className="content">
           <div className="title">

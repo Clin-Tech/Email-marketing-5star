@@ -45,7 +45,7 @@ const letterVariants = {
   visible: { opacity: 1 }, // Letters animate into view with no offset
 };
 
-function Logo({ size, height }: { size: string; height: number }) {
+function Logo({ size, height }: { size?: string; height?: number }) {
   return (
     <motion.div className="logo">
       <motion.svg

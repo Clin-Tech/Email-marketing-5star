@@ -53,7 +53,7 @@ function Signup() {
     <div className="signup">
       <div className="left">
         <div className="header">
-          <Logo size={undefined} height={undefined} />
+          <Logo />
         </div>
         <div className="content">
           <div className="title">
